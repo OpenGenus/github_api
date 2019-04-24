@@ -7,4 +7,6 @@ info="https://api.github.com/repos/%s"%x
 print(info)
 r=requests.get(info).json()
 print(r)
+with open("data.json","w") as output:
+    output.write(str(r))
 
